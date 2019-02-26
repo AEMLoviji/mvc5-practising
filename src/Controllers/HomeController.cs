@@ -1,28 +1,13 @@
-﻿using System.Linq;
-using System.Web.Mvc;
-using SchoolProject.Models;
+﻿using System.Web.Mvc;
 
 namespace SchoolProject.Controllers
 {
     public class HomeController : Controller
     {
-        private SchoolContext db = new SchoolContext();
-
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View();
         }
-
-        public ActionResult Details(int id = 0)
-        {
-            Student student = db.Students.Find(id);
-            if (student == null)
-            {
-                return HttpNotFound();
-            }
-            return View(student);
-        }
-
 
         public ActionResult About()
         {
@@ -36,12 +21,6 @@ namespace SchoolProject.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

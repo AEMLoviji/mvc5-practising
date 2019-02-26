@@ -27,6 +27,21 @@
             @Html.DisplayFor(model => model.Surname)
         </dd>
 
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Courses)
+        </dt>
+
+        <dd>
+            <ul>
+                @foreach (var c in Model.Courses)
+                {
+                    <li>@c.Name</li>
+                }
+            </ul>
+        </dd>
+
+
     </dl>
 </div>
 <p>
