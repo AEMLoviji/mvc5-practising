@@ -1,0 +1,26 @@
+﻿@using SchoolProject.Models
+@model IEnumerable<TreeItem>
+
+
+@helper BuildMenu(IEnumerable<TreeItem> treeItems, int? parentId = null)
+{
+    var items = treeItems.Where(d => d.ParentId == parentId).OrderBy(i => i.Order);
+    if (!items.Any())
+    {
+        return;
+    }
+
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>
+                <span>@item.Label</span>
+                @BuildMenu(treeItems, item.Id)
+            </li>
+        }
+    </ul>
+}
+
+<div id="cssmenu">
+    @BuildMenu(Model)
+</div>

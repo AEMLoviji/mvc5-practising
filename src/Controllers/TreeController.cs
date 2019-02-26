@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,12 +9,13 @@ namespace SchoolProject.Controllers
 {
     public class TreeController : Controller
     {
+        private SchoolContext _db = new SchoolContext();
+
         // GET: Tree
         public ActionResult Index()
         {
-
-
-            return View();
+            var treeStructure = _db.TreeItems.ToList();
+            return View(treeStructure);
         }
     }
 }

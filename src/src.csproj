@@ -234,6 +234,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Tree\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -250,7 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Tree\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902222204157_Initial-Migration.resx">
