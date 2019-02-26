@@ -134,6 +134,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TreeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,7 +142,12 @@
     <Compile Include="Migrations\201902222204157_Initial-Migration.Designer.cs">
       <DependentUpon>201902222204157_Initial-Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902261730189_TreeItem model added.cs" />
+    <Compile Include="Migrations\201902261730189_TreeItem model added.Designer.cs">
+      <DependentUpon>201902261730189_TreeItem model added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TreeItem.cs" />
     <Compile Include="Models\SchoolContext.cs" />
     <Compile Include="Models\SchoolInitializer.cs" />
     <Compile Include="Models\Course.cs" />
@@ -244,10 +250,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Tree\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902222204157_Initial-Migration.resx">
       <DependentUpon>201902222204157_Initial-Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261730189_TreeItem model added.resx">
+      <DependentUpon>201902261730189_TreeItem model added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,6 +7,8 @@ namespace SchoolProject.Models
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
 
+        public DbSet<TreeItem> TreeItems { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Course>().HasMany(c => c.Students)
